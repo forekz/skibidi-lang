@@ -108,6 +108,17 @@ ASTNode* parse_expression(Parser* parser) {
 
 ASTNode* parse_statement(Parser* parser) {
     switch (parser->current_token->type) {
+        case TOKEN_MY: {
+            ASTNode* node = create_node(NODE_MY);
+            eat(parser, TOKEN_MY);
+            node->left = parse_identifier(parser);
+            if (parser->current_token->type == TOKEN_ASSIGN) {
+                eat(parser, TOKEN_ASSIGN);
+                node->right = parse_expression(parser);
+            }
+            eat(parser, TOKEN_SEMICOLON);
+            return node;
+        }
         case TOKEN_IDENTIFIER: {
             ASTNode* node = create_node(NODE_ASSIGNMENT);
             node->left = parse_identifier(parser);
@@ -127,6 +138,38 @@ ASTNode* parse_statement(Parser* parser) {
                 eat(parser, TOKEN_SKIBIDI);
                 node->else_body = parse_statement(parser);
             }
+            return node;
+        }
+        case TOKEN_GOING: {
+            ASTNode* node = create_node(NODE_GOING);
+            eat(parser, TOKEN_GOING);
+            eat(parser, TOKEN_LPAREN);
+            node->condition = parse_expression(parser);
+            eat(parser, TOKEN_RPAREN);
+            node->body = parse_statement(parser);
+            return node;
+        }
+        case TOKEN_SEE: {
+            ASTNode* node = create_node(NODE_SEE);
+            eat(parser, TOKEN_SEE);
+            eat(parser, TOKEN_LPAREN);
+            node->body = parse_expression(parser);
+            eat(parser, TOKEN_RPAREN);
+            eat(parser, TOKEN_SEMICOLON);
+            return node;
+        }
+        case TOKEN_FACE: {
+            ASTNode* node = create_node(NODE_FACE);
+            eat(parser, TOKEN_FACE);
+            node->body = parse_expression(parser);
+            eat(parser, TOKEN_SEMICOLON);
+            return node;
+        }
+        case TOKEN_YOU: {
+            ASTNode* node = create_node(NODE_YOU);
+            eat(parser, TOKEN_YOU);
+            node->left = parse_identifier(parser);
+            eat(parser, TOKEN_SEMICOLON);
             return node;
         }
         case TOKEN_CAMERAMAN: {

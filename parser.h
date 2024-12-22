@@ -10,14 +10,17 @@ typedef enum {
     NODE_IDENTIFIER,
     NODE_ASSIGNMENT,
     NODE_IF,
-    NODE_WHILE,
-    NODE_PRINT,
+    NODE_GOING,     // Вместо WHILE
+    NODE_SEE,       // Вместо PRINT
     NODE_BLOCK,
-    NODE_CAMERAMAN,    // Узел для камерамена
-    NODE_TOILET,       // Узел для туалета
-    NODE_DANCE,        // Узел для танца
-    NODE_TRANSFORM,    // Узел для трансформации
-    NODE_DOPA         // Узел для усиления
+    NODE_MY,        // Для объявления переменных
+    NODE_FACE,      // Для возврата значения
+    NODE_YOU,       // Для специальных операций
+    NODE_CAMERAMAN,
+    NODE_TOILET,
+    NODE_DANCE,
+    NODE_TRANSFORM,
+    NODE_DOPA
 } NodeType;
 
 // Структура узла AST

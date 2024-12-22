@@ -1,25 +1,27 @@
 # Skibidi Language
 
-Skibidi - это лучший язык программирования в мире.
+Skibidi - это лучший язык программирования в мире, основанный на меме "Skibidi Toilet".
 
 ## Особенности языка
 
-- Ключевое слово `dop` вместо `if`
-- Ключевое слово `skibidi` вместо `else`
+- Ключевые слова из песни Skibidi: `you`, `see`, `my`, `face`, `going`
+- Условные конструкции: `dop` (if) и `skibidi` (else)
 - Работа с камераменами и туалетами
 - Специальные команды: `transform`, `dance`, `dopa`
 
 ## Пример кода
 
 ```c
-cameraman cam1;           // Создаем камерамена
-toilet toilet1;          // Создаем скибиди туалет
-transform(toilet1);      // Трансформируем туалет
-dop (cam1) {            // Если камераман существует
-    dance(cam1);        // Заставляем его танцевать
-    dopa(toilet1);      // Усиливаем туалет
-} skibidi {             // Иначе
-    print(0);           // Выводим 0
+my skibidi_toilet;           // Объявление переменной
+cameraman you_see;          // Создание камерамена
+transform(skibidi_toilet);  // Трансформация
+going (my face) {          // Цикл
+    dance(you_see);        // Танец
+    dop (skibidi_toilet) { // Условие
+        see(you_see);      // Вывод
+    } skibidi {            // Иначе
+        face 0;            // Возврат значения
+    }
 }
 ```
 
@@ -37,6 +39,13 @@ gcc -Wall -Wextra main.c lexer.c parser.c -o skibidi
 
 ## Синтаксис
 
+### Ключевые слова
+- `my` - Объявление переменной
+- `you` - Специальная операция
+- `see` - Вывод значения (аналог print)
+- `face` - Возврат значения
+- `going` - Цикл (аналог while)
+
 ### Типы объектов
 - `cameraman` - Камераман
 - `toilet` - Скибиди туалет
@@ -45,12 +54,11 @@ gcc -Wall -Wextra main.c lexer.c parser.c -o skibidi
 - `transform(object)` - Трансформация объекта
 - `dance(object)` - Заставить объект танцевать
 - `dopa(object)` - Усилить объект
-- `print(value)` - Вывести значение
 
 ### Управляющие конструкции
 - `dop (условие) { ... }` - Условный оператор
 - `skibidi { ... }` - Альтернативная ветка условного оператора
-- `while (условие) { ... }` - Цикл
+- `going (условие) { ... }` - Цикл
 
 ## Лицензия
 

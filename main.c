@@ -8,14 +8,16 @@ void print_token(Token* token) {
 }
 
 int main() {
-    char* source = "cameraman cam1;\n"
-                   "toilet toilet1;\n"
-                   "transform(toilet1);\n"
-                   "dop (cam1) {\n"
-                   "    dance(cam1);\n"
-                   "    dopa(toilet1);\n"
-                   "} skibidi {\n"
-                   "    print(0);\n"
+    char* source = "my skibidi_toilet;\n"
+                   "cameraman you_see;\n"
+                   "transform(skibidi_toilet);\n"
+                   "going (my face) {\n"
+                   "    dance(you_see);\n"
+                   "    dop (skibidi_toilet) {\n"
+                   "        see(you_see);\n"
+                   "    } skibidi {\n"
+                   "        face 0;\n"
+                   "    }\n"
                    "}\n";
 
     printf("Исходный код:\n%s\n", source);

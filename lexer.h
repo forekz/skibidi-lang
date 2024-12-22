@@ -23,13 +23,16 @@ typedef enum {
     TOKEN_RBRACE,
     TOKEN_DOP,
     TOKEN_SKIBIDI,
-    TOKEN_WHILE,
-    TOKEN_PRINT,
-    TOKEN_CAMERAMAN,    // Для объявления камерамена
-    TOKEN_TOILET,       // Для объявления туалета
-    TOKEN_DANCE,        // Для выполнения танца
-    TOKEN_TRANSFORM,    // Для трансформации
-    TOKEN_DOPA         // Для усиления способностей
+    TOKEN_YOU,        // Новое ключевое слово (вместо while)
+    TOKEN_SEE,        // Новое ключевое слово (вместо print)
+    TOKEN_MY,         // Новое ключевое слово (для объявления переменной)
+    TOKEN_FACE,       // Новое ключевое слово (для возврата значения)
+    TOKEN_GOING,      // Новое ключевое слово (для цикла)
+    TOKEN_CAMERAMAN,
+    TOKEN_TOILET,
+    TOKEN_DANCE,
+    TOKEN_TRANSFORM,
+    TOKEN_DOPA
 } TokenType;
 
 // Структура токена

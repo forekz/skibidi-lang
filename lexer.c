@@ -66,8 +66,11 @@ Token* get_next_token(Lexer* lexer) {
 
         if (strcmp(identifier, "dop") == 0) return create_token(TOKEN_DOP, identifier);
         if (strcmp(identifier, "skibidi") == 0) return create_token(TOKEN_SKIBIDI, identifier);
-        if (strcmp(identifier, "while") == 0) return create_token(TOKEN_WHILE, identifier);
-        if (strcmp(identifier, "print") == 0) return create_token(TOKEN_PRINT, identifier);
+        if (strcmp(identifier, "you") == 0) return create_token(TOKEN_YOU, identifier);
+        if (strcmp(identifier, "see") == 0) return create_token(TOKEN_SEE, identifier);
+        if (strcmp(identifier, "my") == 0) return create_token(TOKEN_MY, identifier);
+        if (strcmp(identifier, "face") == 0) return create_token(TOKEN_FACE, identifier);
+        if (strcmp(identifier, "going") == 0) return create_token(TOKEN_GOING, identifier);
         if (strcmp(identifier, "cameraman") == 0) return create_token(TOKEN_CAMERAMAN, identifier);
         if (strcmp(identifier, "toilet") == 0) return create_token(TOKEN_TOILET, identifier);
         if (strcmp(identifier, "dance") == 0) return create_token(TOKEN_DANCE, identifier);
